@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="a471f223-6533-42d2-b517-09467e05f860" activeEnvironment="Default" name="SparkDemo" resourceRoot="" soapui-version="5.2.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.actions.iface.tools.soapui.TestRunnerAction@values-local"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Report Format(s)" value=""/>
+  <con:entry key="Host:Port" value=""/>
+  <con:entry key="Export JUnit Results" value="false"/>
+  <con:entry key="Export All" value="false"/>
+  <con:entry key="Save After" value="false"/>
+  <con:entry key="Add Settings" value="false"/>
+  <con:entry key="WSS Password Type" value=""/>
+  <con:entry key="TestSuite" value="TestSuite"/>
+  <con:entry key="Endpoint" value=""/>
+  <con:entry key="Select Report Type" value=""/>
+  <con:entry key="System Properties" value=""/>
+  <con:entry key="Password" value=""/>
+  <con:entry key="Print Report" value="false"/>
+  <con:entry key="Open Report" value="false"/>
+  <con:entry key="Global Properties" value=""/>
+  <con:entry key="Project Properties" value=""/>
+  <con:entry key="Project Password" value=""/>
+  <con:entry key="TestCase" value="createPerson"/>
+  <con:entry key="Username" value=""/>
+  <con:entry key="user-settings.xml Password" value=""/>
+  <con:entry key="TestRunner Path" value=""/>
+  <con:entry key="Environment" value="Default"/>
+  <con:entry key="Coverage Report" value="false"/>
+  <con:entry key="Enable UI" value="false"/>
+  <con:entry key="Root Folder" value=""/>
+  <con:entry key="Ignore Errors" value="false"/>
+  <con:entry key="Domain" value=""/>
+  <con:entry key="Tool Args" value=""/>
+  <con:entry key="Save Project" value="false"/>
+</xml-fragment>]]></con:setting></con:settings><con:interface xsi:type="con:RestService" id="354ba45d-706c-4c3e-976c-b4d14e959468" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://localhost:9000" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart=""/><con:endpoints><con:endpoint>http://DEV-JavierR:8080/</con:endpoint><con:endpoint>http://localhost:8000</con:endpoint></con:endpoints><con:resource name="getAllPersons" path="/persons" id="7dcb8e18-4b50-4bc3-9cd5-df7e25d5023a"><con:settings/><con:parameters/><con:method name="getAll" id="07a24bf8-1ccc-49cf-a67c-7da13ee86bd9" method="GET"><con:settings/><con:parameters/><con:representation type="FAULT"><con:mediaType>text/html; charset=UTF-8</con:mediaType><con:status>404</con:status><con:params/><con:element>html</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element>Response</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:request name="getAllperson" id="e80e88f9-7a0c-4e17-b797-53521399f4e0" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding xsi:nil="true"/><con:endpoint>${#Project#endPoint}</con:endpoint><con:request/><con:originalUri>http://localhost/person</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource><con:resource name="getPersonById" path="/persons/{id}" id="90dbbdd6-8c11-4b04-b7b5-9676c83ee34a"><con:settings/><con:parameters><con:parameter><con:name>id</con:name><con:value>id</con:value><con:style>TEMPLATE</con:style><con:default>id</con:default></con:parameter></con:parameters><con:method name="getPersonById" id="825b0a5c-4bd8-4e86-8d7c-1cf3e0a6f613" method="GET"><con:settings/><con:parameters/><con:request name="getPersonById" id="752253d6-3781-4177-b351-d14785acc5bc" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>${#Project#endPoint}</con:endpoint><con:request/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource><con:resource name="deletePerson" path="/persons/{id}" id="c80085ba-87a4-4aee-aa2d-6581aaf9cd89"><con:settings/><con:parameters><con:parameter><con:name>id</con:name><con:value>id</con:value><con:style>TEMPLATE</con:style><con:default>id</con:default></con:parameter></con:parameters><con:method name="delete" id="cb2152ed-1fc2-4468-b9a5-5536584982c1" method="DELETE"><con:settings/><con:parameters/><con:request name="deletePerson" id="3f574a2a-11da-49c7-b9f6-5d1e44165bc2" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>${#Project#endPoint}</con:endpoint><con:request/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource><con:resource name="editPerson" path="/persons/{id}" id="60ae2970-349f-4edd-a5e1-e467885da86b"><con:settings/><con:parameters><con:parameter><con:name>id</con:name><con:value>id</con:value><con:style>TEMPLATE</con:style><con:default>id</con:default></con:parameter></con:parameters><con:method name="edit" id="7afabb38-b1e0-41be-9105-1af66e43e766" method="PUT"><con:settings/><con:parameters/><con:request name="editPerson" id="b0894ca2-5a02-4dad-875e-a37e5ffdf7cc" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>${#Project#endPoint}</con:endpoint><con:request/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource><con:resource name="create person" path="/persons" id="17fbdf8c-99b7-43be-a6d6-b40452d440f6"><con:settings/><con:parameters/><con:method name="create" id="f39b9e51-d79f-4e36-ad02-d1bce71abc5b" method="POST"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>text/html; charset=UTF-8</con:mediaType><con:status>201</con:status><con:params/></con:representation><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>201</con:status><con:params/><con:element xmlns:per="http://localhost/persons">per:Response</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:request name="createPerson" id="56d1e519-c735-434f-b70f-18f91c87dfdf" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>${#Project#endPoint}</con:endpoint><con:request>{
+ "name": Javier,
+ "age": 20
+}
+</con:request><con:originalUri>http://localhost/persons</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource></con:interface><con:testSuite id="72bcabab-4ae9-4640-a339-d611cb609382" name="TestSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="4b7cc935-b1f1-4ac2-b7c8-49e6f200840c" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="createPerson" searchProperties="true"><con:settings/><con:testStep type="groovy" name="generateJSONPerson" id="2f17d6ce-4db4-4f62-a28d-14d4f37efdf8"><con:settings/><con:config><script>import groovy.json.*
+
+// get a reference to the library TestSuite
+library = testRunner.testCase.testSuite.project.testSuites["Library"]
+// find the module within the library 
+module = library.testCases["scripts"].testSteps["utils"]
+module.run(testRunner, context)
+//log.info context.utils.isGUID('123')
+//log.info 'nombre generado: '+ context.utils.randomString(10)
+
+def builder = new JsonBuilder()
+
+builder {
+	name(context.utils.randomString(10))
+	age((int)Math.random()*100 + 1)
+}
+
+testRunner.testCase.setPropertyValue("person", builder.toString())
+</script></con:config></con:testStep><con:testStep type="restrequest" name="create" id="3759ee1d-bab9-4414-8462-3ab9eff8c995"><con:settings/><con:config service="http://localhost:9000" resourcePath="/persons" methodName="create" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="create" id="56d1e519-c735-434f-b70f-18f91c87dfdf" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8000</con:endpoint><con:request>${#TestCase#person}
+</con:request><con:originalUri>http://localhost/persons</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="2459d79d-e4b2-4c27-a3f5-198679b6de80" name="Valid HTTP Status Codes"><con:configuration><codes>201</codes></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="6b6a9f24-ae94-496d-952c-3744c4b6db4d" name="Script Assertion"><con:configuration><scriptText>import groovy.json.*
+
+library = context.getCurrentStep().testCase.testSuite.project.testSuites["Library"]
+module = library.testCases["scripts"].testSteps["utils"]
+module.run(null, context)
+
+def response = context.expand('${create#Response}')
+def json = new JsonSlurper().parseText(response)
+
+assert context.utils.isGUID(json.id)
+</scriptText></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="b1a6eeaf-a2ca-463f-ade5-07a9f15b189c" name="time"><con:configuration><scriptText>assert messageExchange.timeTaken &lt; 200</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:loadTest id="bb3fc89b-48a2-401e-bbb3-38b2580fc32c" name="LoadTest 1"><con:settings><con:setting id="HttpSettings@close-connections">false</con:setting></con:settings><con:threadCount>20</con:threadCount><con:startDelay>0</con:startDelay><con:sampleInterval>250</con:sampleInterval><con:calculateTPSOnTimePassed>true</con:calculateTPSOnTimePassed><con:resetStatisticsOnThreadCountChange>true</con:resetStatisticsOnThreadCountChange><con:historyLimit>-1</con:historyLimit><con:testLimit>60</con:testLimit><con:limitType>COUNT_PER_THREAD</con:limitType><con:loadStrategy><con:type>Burst</con:type><con:config><burstDelay>20000</burstDelay><burstDuration>10000</burstDuration></con:config></con:loadStrategy><con:assertion type="Step Status" name="Step Status"/><con:maxAssertionErrors>100</con:maxAssertionErrors><con:cancelExcessiveThreads>true</con:cancelExcessiveThreads><con:strategyInterval>500</con:strategyInterval></con:loadTest><con:properties><con:property><con:name>person</con:name><con:value>{"name":"PnKCbcfOxO","age":73}</con:value></con:property></con:properties></con:testCase><con:properties/></con:testSuite><con:testSuite id="0063a9f8-a936-482b-82c0-36e93b51d58e" name="Library" disabled="true"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="45f7682c-9aac-4856-9a57-bc03c552a7d0" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="scripts" searchProperties="true"><con:settings/><con:testStep type="groovy" name="utils" id="3af1a6ec-e115-4ec7-a2f3-780cb9acfe81"><con:settings/><con:config><script>import org.apache.commons.lang.RandomStringUtils
+
+public class Utils {
+    def static isGUID(guid){
+		try{
+			UUID.fromString(guid)
+			return true
+		}catch(ex){
+			return false
+		}
+	}
+
+    def static randomString(def length){
+		String charset = (('A'..'Z') + ('a'..'z')).join()
+		return RandomStringUtils.random(length, charset.toCharArray())
+	}
+}
+
+context.setProperty("utils", new Utils())</script></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties><con:property><con:name>endPoint</con:name><con:value>http://localhost:8000</con:value></con:property></con:properties><con:wssContainer/><con:oAuth2ProfileContainer/></con:soapui-project>

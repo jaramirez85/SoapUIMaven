@@ -20,6 +20,9 @@
                 <groupId>com.smartbear.soapui</groupId>
                 <artifactId>soapui-pro-maven-plugin</artifactId>
                 <version>5.0.0</version>
+                <configuration>
+                    <projectFile>D:\GitHub\SoapUIMaven\SoapMaven-soapui-project.xml</projectFile>
+                </configuration>
                 <dependencies>
                 </dependencies>
                 <executions>
@@ -28,12 +31,12 @@
                         <goals>
                             <goal>test</goal>
                         </goals>
-                        <configuration>
+                        <!--<configuration>
                             <projectFile>SoapMaven-soapui-project.xml</projectFile>
                             <projectProperties>
                                 <value>message=Hello World!</value>
                             </projectProperties>
-                        </configuration>
+                        </configuration>-->
                     </execution>
                 </executions>
             </plugin>
